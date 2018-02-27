@@ -94,4 +94,11 @@ categories: Category[];
     //this.result = 'Hello ' + event.target.value;
     this.result = 'Category Id is selected: ' + event.target.value;
   }
+
+  save(event: any):void{
+    var selectedFile = event.target.files[0];
+    this.result = 'File name: ' + selectedFile.name;
+    this.result += '<br>File Size(byte): ' + selectedFile.size;
+    this.result += '<br>File Type: ' + selectedFile.type;
+  }
 }

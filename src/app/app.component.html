@@ -80,10 +80,18 @@
     <option value="c4">Category 4</option>
   </select>
 -->
+<!--
 <select (change)="display($event)">
   <option *ngFor="let category of categories" value="{{category.id}}">{{category.name}}</option>
 </select>
   <br>
-  <!-- {{result}} -->
+  {{result}}
+  <span [innerHTML]="result"></span>
+-->
+</form>
+
+<form>
+  <input type="file" (change)="save($event)">
+  <br>
   <span [innerHTML]="result"></span>
 </form>
