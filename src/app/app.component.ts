@@ -84,6 +84,7 @@ export class AppComponent implements OnInit{
   }
 
   display(event: any):void{
-    this.result = 'Hello ' + event.target.value;
+    //this.result = 'Hello ' + event.target.value;
+    this.result = 'Category Id is selected: ' + event.target.value;
   }
 }

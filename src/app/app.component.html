@@ -66,6 +66,18 @@
 
   <input type="text" placeholder="Input your name" (keyup)="display($event)">
 </form -->
+<!--
 <input type="text" placeholder="Input your name" (keyup.enter)="display($event)">
 <br>
 {{result}}
+-->
+<form>
+  <select (change)="display($event)">
+    <option value="c1">Category 1</option>
+    <option value="c2">Category 2</option>
+    <option value="c3">Category 3</option>
+    <option value="c4">Category 4</option>
+  </select>
+  <br>
+  {{result}}
+</form>

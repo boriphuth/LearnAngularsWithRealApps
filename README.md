@@ -15,3 +15,5 @@ Learn Angular 5 with Real Apps
 5.KeyUp Event in Angular 5(Event)
 
 6.KeyUp Enter Event in Angular 5(event)
+
+7.Change Event in Angular 5(event)
