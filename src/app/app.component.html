@@ -58,13 +58,14 @@
 </table>
 -->
 <!-- 4.Click Event in Angular 5 (Event) -->
+<!--
 <form>
-  <!--
   <input type="buttin" value="Click Me" (click)="clickMe()">
   <br>
   {{result}}
-  -->
+
   <input type="text" placeholder="Input your name" (keyup)="display($event)">
-  <br>
-  {{result}}
-</form>
+</form -->
+<input type="text" placeholder="Input your name" (keyup.enter)="display($event)">
+<br>
+{{result}}
