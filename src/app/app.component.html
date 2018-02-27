@@ -7,6 +7,7 @@
 <br>Email: {{email}}
 -->
 <!-- 2.Pass Object from Component to View -->
+<!--
 <h3>Product Info</h3>
 <table border="1">
   <tr>
@@ -16,5 +17,42 @@
   <tr>
     <td>Name</td>
     <td>{{product.name}}</td>
+  </tr>
+  <tr>
+    <td>Photo</td>
+    <td><img src="assets/images/{{product.photo}}" width="60"></td>
+  </tr>
+  <tr>
+    <td>Price</td>
+    <td>{{product.price}}</td>
+  </tr>
+  <tr>
+    <td>Qyantity</td>
+    <td>{{product.quantity}}</td>
+  </tr>
+  <tr>
+    <td>Toatal</td>
+    <td>{{product.price * product.quantity}}</td>
+  </tr>
+</table>
+-->
+<!-- -->
+<h3>Products List</h3>
+<table border="1">
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Photo</th>
+    <th>Price</th>
+    <th>Qyantity</th>
+    <th>Toatal</th>
+  </tr>
+  <tr *ngFor="let product of products">
+    <td>{{product.id}}</td>
+    <td>{{product.name}}</td>
+    <td><img src="assets/images/{{product.photo}}" width="60"></td>
+    <td>{{product.price}}</td>
+    <td>{{product.quantity}}</td>
+    <td>{{product.price * product.quantity}}</td>
   </tr>
 </table>

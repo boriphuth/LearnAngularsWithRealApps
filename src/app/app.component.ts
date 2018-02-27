@@ -7,32 +7,67 @@ import { Product } from './entities/product.entity';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
+    /*
+    // 1.Pass Values from Component to View
+    age: number;
+    fullName: string;
+    status: boolean;
+    email: any;
+  //1.Pass Values from Component to View
+    ngOnInit(): void {
+      this.age = 32;
+      this.fullName = 'Boriphuth Saensukphattraka';
+      this.status = true;
+      this.email = 'boriphuth.sa@gmail.com';
+    }
+    title = 'app';
+    */
   /*
-  // 1.Pass Values from Component to View
-  age: number;
-  fullName: string;
-  status: boolean;
-  email: any;
- //1.Pass Values from Component to View
-  ngOnInit(): void {
-    this.age = 32;
-    this.fullName = 'Boriphuth Saensukphattraka';
-    this.status = true;
-    this.email = 'boriphuth.sa@gmail.com';
-  }
-  title = 'app';
-  */
- 
- //2.Pass Object from Component to View
- product: Product;
+  //2.Pass Object from Component to View
+  product: Product;
 
- ngOnInit(): void {
-  this.product = {
-    id: 'p01',
-    name: 'name 1',
-    photo: 'thumb1.gif',
-    price: 20,
-    quantity: 6
-  };
-}
+  ngOnInit(): void {
+    this.product = {
+      id: 'p01',
+      name: 'name 1',
+      photo: 'card1.png',
+      price: 20,
+      quantity: 6
+    };
+  }
+    */
+  //3.Pass Object List from Component to View
+  products: Product[];
+
+  ngOnInit(): void {
+    this.products = [{
+      id: 'p01',
+      name: 'name 1',
+      photo: 'card1.png',
+      price: 20,
+      quantity: 6
+    },
+    {
+      id: 'p02',
+          name: 'name 2',
+          photo: 'card2.png',
+          price: 12,
+          quantity: 3
+    },
+    {
+      id: 'p03',
+          name: 'name 3',
+          photo: 'card3.png',
+          price: 14,
+          quantity: 8
+    },
+    {
+      id: 'p04',
+          name: 'name 4',
+          photo: 'card4.png',
+          price: 30,
+          quantity: 9
+    }
+  ]
+  }
 }
