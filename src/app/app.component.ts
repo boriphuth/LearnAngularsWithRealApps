@@ -74,10 +74,14 @@ export class AppComponent implements OnInit{
   }
   */
  //4.Click Event in Angular 5 (Event)
- result: string = '';
-categories: Category[];
+ result: string;
+
+ categories: Category[];
 
   ngOnInit(): void {
+
+    this.result = 'Use One-Way';
+
     this.categories = [
       {id:'c1',name:'category 1'},
       {id:'c2',name:'category 2'},

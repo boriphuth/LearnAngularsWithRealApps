@@ -23,3 +23,5 @@ Learn Angular 5 with Real Apps
 9.Select A File with Change Event in Angular 5(Event)
 
 10.Select Multiple File with Change Event in Angular 5(event)
+
+11.One-Way Data Binding in Angular 5(Data Binding)

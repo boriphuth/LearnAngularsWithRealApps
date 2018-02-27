@@ -71,7 +71,7 @@
 <br>
 {{result}}
 -->
-<form>
+<!-- <form> -->
   <!--
   <select (change)="display($event)">
     <option value="c1">Category 1</option>
@@ -88,10 +88,16 @@
   {{result}}
   <span [innerHTML]="result"></span>
 -->
-</form>
+<!-- </form> -->
 
 <form>
   <input type="file" (change)="save($event)" multiple="multiple" >
   <br>
   <span [innerHTML]="result"></span>
+</form>
+
+<form>
+  <input type="text" [ngModel]="result" [ngModelOptions]="{standalone: true}">
+  <br>
+  {{result}}
 </form>
