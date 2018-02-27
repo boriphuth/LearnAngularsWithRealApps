@@ -80,7 +80,8 @@ export class AppComponent implements OnInit{
 
   ngOnInit(): void {
 
-    this.result = 'Use One-Way';
+    //this.result = 'Use One-Way';
+    this.result = 'Use Two-Way';
 
     this.categories = [
       {id:'c1',name:'category 1'},

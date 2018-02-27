@@ -97,7 +97,8 @@
 </form>
 
 <form>
-  <input type="text" [ngModel]="result" [ngModelOptions]="{standalone: true}">
+  <!-- <input type="text" [ngModel]="result" [ngModelOptions]="{standalone: true}"> -->
+  <input type="text" [(ngModel)]="result" [ngModelOptions]="{standalone: true}">
   <br>
   {{result}}
 </form>
