@@ -94,11 +94,21 @@ categories: Category[];
     //this.result = 'Hello ' + event.target.value;
     this.result = 'Category Id is selected: ' + event.target.value;
   }
-
+/*
   save(event: any):void{
     var selectedFile = event.target.files[0];
     this.result = 'File name: ' + selectedFile.name;
     this.result += '<br>File Size(byte): ' + selectedFile.size;
     this.result += '<br>File Type: ' + selectedFile.type;
   }
+  */
+ save(event: any):void{
+   var selectedFiles = event.target.files;
+   for(let i = 0; i< selectedFiles.length; i++){
+    this.result += 'File name: ' + selectedFiles[i].name;
+    this.result += '<br>File Size(byte): ' + selectedFiles[i].size;
+    this.result += '<br>File Type: ' + selectedFiles[i].type;
+    this.result += '<br>---------------------------';
+   }
+ }
 }
