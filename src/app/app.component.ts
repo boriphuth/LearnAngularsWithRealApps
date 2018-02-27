@@ -36,6 +36,7 @@ export class AppComponent implements OnInit{
     };
   }
     */
+   /*
   //3.Pass Object List from Component to View
   products: Product[];
 
@@ -69,5 +70,20 @@ export class AppComponent implements OnInit{
           quantity: 9
     }
   ]
+  }
+  */
+ //4.Click Event in Angular 5 (Event)
+ result: string = '';
+
+  ngOnInit(): void {
+
+  }
+
+  clickMe():void{
+    this.result = 'Hello world';
+  }
+
+  display(event: any):void{
+    this.result = 'Hello ' + event.target.value;
   }
 }
