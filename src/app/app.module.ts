@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
+import { MathService } from './services/math.service';
 
 // 1.Pass Values from Component to View
 @NgModule({
@@ -14,7 +15,9 @@ import { AppComponent } from './app.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    MathService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

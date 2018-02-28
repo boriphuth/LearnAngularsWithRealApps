@@ -5,6 +5,7 @@ import { Account } from './entities/account.entity';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { min } from './validators/min.validator';
 import { max } from './validators/max.validator';
+import { MathService } from './services/math.service';
 
 @Component({
   selector: 'app-root',
@@ -122,6 +123,7 @@ export class AppComponent implements OnInit{
    }
  }
  */
+/*
  //12.Form Controls in Angular 5(Form Controls)
   genders: any;
   roles: any;
@@ -133,7 +135,8 @@ export class AppComponent implements OnInit{
   constructor(
     private formBuilder:FormBuilder
   ){}
-
+*/
+/*
   ngOnInit(){
     this.checkedList =[];
 
@@ -169,17 +172,17 @@ export class AppComponent implements OnInit{
       username:['', [Validators.required, Validators.minLength(3),Validators.maxLength(10)]],
       password:['', [Validators.required, Validators.pattern('^((?=.*[0-9])(?=.*[a-z])(?=.*[@#$%]).{6,20})$')]],
       age: [0, [min(18),max(120)]],
-      email:['',[Validators.required, Validators.pattern(/\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/)]],
-      website: ['', [Validators.pattern(/(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,4}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))/)]],
-      description:'',
-      status:true,
-      gender:this.genders[0].value,
-      languages:[],
-      role:[],
-      certificates:[]
-    });
-  }
-
+      //email:['',[Validators.required, Validators.pattern(/\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*///)]],
+      //website: ['', [Validators.pattern(/(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,4}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))/)]],
+      //description:'',
+      //status:true,
+      //gender:this.genders[0].value,
+      //languages:[],
+      //role:[],
+      //certificates:[]
+    //});
+  //}
+/*
   save():void{
     let account: Account = this.registerForm.value;
     account.languages = this.checkedList;
@@ -219,6 +222,16 @@ export class AppComponent implements OnInit{
         }
       }
     }
-  }
+  }*/
+  result1: number;
+  result2: number;
+  result3: number;
 
+  constructor(private mathService: MathService){}
+
+  ngOnInit(){
+    this.result1 = this.mathService.addition(10,2);
+    this.result2 = this.mathService.subtraction(10,2);
+    this.result3 = this.mathService.multiply(10,2);
+  }
 }
