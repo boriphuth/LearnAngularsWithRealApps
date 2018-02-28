@@ -2,6 +2,7 @@ export class Account{
 
   username: string;
   password: string;
+  age: Number
   description: string;
   status: boolean;
   gender: string;

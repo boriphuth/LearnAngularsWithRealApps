@@ -144,6 +144,23 @@
         </td>
       </tr>
       <tr>
+          <td>Age</td>
+          <td>
+            <input type="number" formControlName="age">
+          </td>
+          <td>
+              <div *ngIf="registerForm.get('age').touched">
+                  <div *ngIf="registerForm.hasError('min', ['age'])">
+                    Please enter a value greater than or equal to 18
+                  </div>
+                  <div *ngIf="registerForm.hasError('max', ['age'])">
+                      Please enter a value less than or equal to 120
+                    </div>
+                </div>
+          </td>
+        </tr>
+        <tr>
+      <tr>
           <td>Email</td>
           <td>
             <input type="text" formControlName="email">
