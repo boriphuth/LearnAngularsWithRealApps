@@ -30,6 +30,9 @@ Learn Angular 5 with Real Apps
 
 13.Form Validation in Angular 5(Form Validataion)
 
-14.Customer Validators in Angular 5
+14.Customer Validators in Angular 5(Form Validataion)
 
-15.Create and Use Service in Angular 5
+15.Create and Use Service in Angular 5(Services)
+
+16.Use Object and OBject List with Service in Angular 5(Services)
+

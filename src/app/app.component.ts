@@ -6,6 +6,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { min } from './validators/min.validator';
 import { max } from './validators/max.validator';
 import { MathService } from './services/math.service';
+import { ProductService } from './services/product.service';
 
 @Component({
   selector: 'app-root',
@@ -223,6 +224,7 @@ export class AppComponent implements OnInit{
       }
     }
   }*/
+  /*
   result1: number;
   result2: number;
   result3: number;
@@ -234,4 +236,14 @@ export class AppComponent implements OnInit{
     this.result2 = this.mathService.subtraction(10,2);
     this.result3 = this.mathService.multiply(10,2);
   }
+  */
+ product: Product;
+ products: Product[];
+
+ constructor(private productService: ProductService){}
+
+ ngOnInit(){
+   this.product = this.productService.find();
+   this.products = this.productService.findAll();
+ }
 }
