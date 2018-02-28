@@ -27,3 +27,6 @@ Learn Angular 5 with Real Apps
 11.One-Way Data Binding in Angular 5(Data Binding)
 
 12.Form Controls in Angular 5(Form Controls)
+
+13.Form Validation in Angular 5(Form Validataion)
+

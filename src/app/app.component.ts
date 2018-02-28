@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Product } from './entities/product.entity';
 import { Category } from './entities/category.entity';
 import { Account } from './entities/account.entity';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -164,8 +164,11 @@ export class AppComponent implements OnInit{
     ];
 
     this.registerForm = this.formBuilder.group({
-      username:'',
-      password:'',
+      username:['', [Validators.required, Validators.minLength(3),Validators.maxLength(10)]],
+      password:['', [Validators.required, Validators.pattern('^((?=.*[0-9])(?=.*[a-z])(?=.*[@#$%]).{6,20})$')]],
+      email:['',[Validators.required, Validators.pattern(/\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/)]],
+      //website:['',[Validators.pattern('@^(http\:\/\/|https\:\/\/)?([a-z0-9][a-z0-9\-]*\.)+[a-z0-9][a-z0-9\-]*$@i')]],
+      website: ['', [Validators.pattern(/(https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,4}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))/)]],
       description:'',
       status:true,
       gender:this.genders[0].value,
@@ -178,7 +181,12 @@ export class AppComponent implements OnInit{
   save():void{
     let account: Account = this.registerForm.value;
     account.languages = this.checkedList;
-    this.displayAccountInfoConsole(account);
+    //this.displayAccountInfoConsole(account);
+    console.log('Account Info');
+    console.log('Username: ' + this.registerForm.value.username);
+    console.log('Password: ' + this.registerForm.value.password);
+    console.log('Email: ' + this.registerForm.value.email);
+    console.log('Website: ' + this.registerForm.value.website);
   };
 
   displayAccountInfoConsole(account: Account) {
